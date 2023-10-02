@@ -10,7 +10,8 @@ import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import { Card, CardBody } from "react-bootstrap";
 import PracticeFifthShortestJS from "./Components/PracticeFifthShortestJS ";
-import PracticeSixth from "./Components/PracticeSixth";
+import PracticeSixthUndefinedAndNotDefined from "./Components/PracticeSixthUndefinedAndNotDefined";
+import PracticeSeventhScopeLexicalEnvironment from "./Components/PracticeSeventhScopeLexicalEnvironment";
 
 function App() {
   return (
@@ -32,19 +33,25 @@ function App() {
               {/* Nav-Bar Start */}
               <Nav variant="pills" className="flex-column mt-4">
                 <NavLink className="nav-link" to="/">
-                  Practice 2 : Execution Contexts
+                  P-2 : Execution Contexts
                 </NavLink>
                 <NavLink className="nav-link" to="/hoisting">
-                  Practice 3 : Hoisting
+                  P-3 : Hoisting
                 </NavLink>
                 <NavLink className="nav-link" to="/function-and-variable">
-                  Practice 4 : Function & Variable
+                  P-4 : Function & Variable
                 </NavLink>
                 <NavLink className="nav-link" to="/shortest-js-program">
-                  Practice 5 : Shortest-JS Program
+                  P-5 : Shortest-JS Program
                 </NavLink>
-                <NavLink className="nav-link" to="/practice-sixth">
-                  Practice 6 :
+                <NavLink className="nav-link" to="/undefined-and-notdefined">
+                  P-6 : Undefined And Notdefined
+                </NavLink>
+                <NavLink
+                  className="nav-link"
+                  to="/scope-and-lexical-environment"
+                >
+                  P-7 : Scope And Lexical Environment
                 </NavLink>
               </Nav>
               {/* Nav-Bar End */}
@@ -67,11 +74,17 @@ function App() {
                   path="shortest-js-program"
                   element={<PracticeFifthShortestJS />}
                 />
-
-                {/* Practice 6 :  */}
-                <Route path="practice-sixth" element={<PracticeSixth />} />
+                {/* Practice 6 : Undefined And Notdefined */}
+                <Route
+                  path="undefined-and-notdefined"
+                  element={<PracticeSixthUndefinedAndNotDefined />}
+                />
+                {/* Practice 7 : Scope And Lexical Environment */}
+                <Route
+                  path="scope-and-lexical-environment"
+                  element={<PracticeSeventhScopeLexicalEnvironment />}
+                />
               </Routes>
-
               {/* Routes End */}
             </Col>
           </Row>

@@ -13,11 +13,11 @@ const PracticeFifthShortestJS = () => {
     <div>
       <h4>Practice 5 : Shortest-JS Program </h4>
       <p>
-        Using the <b>global Window object</b>, we can access the{" "}
-        <b>global variable.</b> The Window object is the global object that
-        represents the browser <b>Window</b>. All the variables declared in the
-        global scope become the variable of the Window object. To access this
-        Window object, we have to use the object dot notation
+        Using the global Window object, we can access the global variable. The
+        Window object is the global object that represents the browser Window.
+        All the variables declared in the global scope become the variable of
+        the Window object. To access this Window object, we have to use the
+        object dot notation
       </p>
     </div>
   );
