@@ -63,3 +63,12 @@
   color: var(--bs-nav-pills-link-active-color);
   background-color: var(--bs-nav-pills-link-active-bg);
 }
+
+.background-color {
+  background-color: #282c34;
+  color: #F5F5F5;
+}
+
+.row.m-0 {
+  height: 100vh;
+}

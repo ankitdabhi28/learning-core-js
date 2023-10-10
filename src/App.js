@@ -12,6 +12,8 @@ import { Card, CardBody } from "react-bootstrap";
 import PracticeFifthShortestJS from "./Components/PracticeFifthShortestJS ";
 import PracticeSixthUndefinedAndNotDefined from "./Components/PracticeSixthUndefinedAndNotDefined";
 import PracticeSeventhScopeLexicalEnvironment from "./Components/PracticeSeventhScopeLexicalEnvironment";
+import JustExample from "./Components/JustExample";
+import PracticeEighthTemporalDeadZone from "./Components/PracticeEighthTemporalDeadZone";
 
 function App() {
   return (
@@ -53,6 +55,12 @@ function App() {
                 >
                   P-7 : Scope And Lexical Environment
                 </NavLink>
+                <NavLink className="nav-link" to="/temporal-dead-zone">
+                  P-8 : Temporal Dead Zone
+                </NavLink>
+                <NavLink className="nav-link" to="/example-for-options">
+                  Example-For-Options
+                </NavLink>
               </Nav>
               {/* Nav-Bar End */}
             </Col>
@@ -84,6 +92,13 @@ function App() {
                   path="scope-and-lexical-environment"
                   element={<PracticeSeventhScopeLexicalEnvironment />}
                 />
+                {/* P-8 : Temporal Dead Zone */}
+                <Route
+                  path="temporal-dead-zone"
+                  element={<PracticeEighthTemporalDeadZone />}
+                />
+                {/*  Example-For-Options */}
+                <Route path="example-for-options" element={<JustExample />} />
               </Routes>
               {/* Routes End */}
             </Col>

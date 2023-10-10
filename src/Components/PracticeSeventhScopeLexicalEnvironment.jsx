@@ -34,7 +34,7 @@ const PracticeSeventhScopeLexicalEnvironment = () => {
 
   return (
     <div>
-      <h4>P-7 : Scope And Lexical Environment</h4>
+      <h4>Practice 7 : Scope And Lexical Environment</h4>
       <p>
         Each block of code creates scope and a lexical environment. JavaScript
         cares about the lexical environment when you ask for a variable while
