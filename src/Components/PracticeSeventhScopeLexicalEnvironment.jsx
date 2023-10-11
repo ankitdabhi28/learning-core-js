@@ -42,6 +42,7 @@ const PracticeSeventhScopeLexicalEnvironment = () => {
         can't find that variable in its block it will go at the outer reference
         or block and look for variables there.
       </p>
+      <p>just commit</p>
     </div>
   );
 };
