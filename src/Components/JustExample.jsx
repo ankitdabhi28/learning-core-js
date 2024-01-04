@@ -339,6 +339,7 @@ const JustExample = () => {
     );
 
     if (selectedOption) {
+      // eslint-disable-next-line
       method_1_routePath = selectedOption.route_path;
     }
   }
@@ -351,7 +352,7 @@ const JustExample = () => {
       return (
         routeDetail?.selected_day === receivedData?.selected_day &&
         routeDetail?.route_options?.some((option) => {
-          console.log("option:--->>> 1", option);
+          // console.log("option:--->>> 1", option);
           return (
             option.selectted_route_option ===
             receivedData.selectted_route_option
@@ -360,10 +361,10 @@ const JustExample = () => {
       );
     });
 
-    console.log("matchingRouteMethodSecond:-->>", matchingRouteMethodSecond);
+    // console.log("matchingRouteMethodSecond:-->>", matchingRouteMethodSecond);
     return matchingRouteMethodSecond?.length > 0
       ? matchingRouteMethodSecond[0]?.route_options?.find((option) => {
-          console.log("option:--->>> 2", option);
+          // console.log("option:--->>> 2", option);
           return (
             option?.selectted_route_option ===
             receivedData?.selectted_route_option
@@ -376,6 +377,10 @@ const JustExample = () => {
 
   // console.log("method_2_routePath-->>", method_2_routePath);
 
+  // var a = 10;
+  // let b = 100;
+  // const c = 1000;
+  // console.log("c:-->>", c);
   return (
     <div>
       <div>

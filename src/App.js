@@ -14,6 +14,7 @@ import PracticeSixthUndefinedAndNotDefined from "./Components/PracticeSixthUndef
 import PracticeSeventhScopeLexicalEnvironment from "./Components/PracticeSeventhScopeLexicalEnvironment";
 import JustExample from "./Components/JustExample";
 import PracticeEighthTemporalDeadZone from "./Components/PracticeEighthTemporalDeadZone";
+import PracticeExample from "./Components/Practice_Example";
 
 function App() {
   return (
@@ -61,6 +62,9 @@ function App() {
                 <NavLink className="nav-link" to="/example-for-options">
                   Example-For-Options
                 </NavLink>
+                <NavLink className="nav-link" to="/practice-example">
+                  Practice Example
+                </NavLink>
               </Nav>
               {/* Nav-Bar End */}
             </Col>
@@ -99,6 +103,8 @@ function App() {
                 />
                 {/*  Example-For-Options */}
                 <Route path="example-for-options" element={<JustExample />} />
+                {/* Practice_Example */}
+                <Route path="practice-example" element={<PracticeExample />} />
               </Routes>
               {/* Routes End */}
             </Col>
