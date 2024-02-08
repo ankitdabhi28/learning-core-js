@@ -1,22 +1,77 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import PracticeSecondExecution from "./Components/PracticeSecondExecution ";
-import PracticeThirdHoisting from "./Components/PracticeThirdHoisting";
-import PracticeFourthFunctionAndVariable from "./Components/PracticeFourthFunctionAndVariable";
+import PracticeSecondExecution from "./Components/app/PracticeSecondExecution ";
+import PracticeThirdHoisting from "./Components/app/PracticeThirdHoisting";
+import PracticeFourthFunctionAndVariable from "./Components/app/PracticeFourthFunctionAndVariable";
 import { Route, Routes, NavLink } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import { Card, CardBody } from "react-bootstrap";
-import PracticeFifthShortestJS from "./Components/PracticeFifthShortestJS ";
-import PracticeSixthUndefinedAndNotDefined from "./Components/PracticeSixthUndefinedAndNotDefined";
-import PracticeSeventhScopeLexicalEnvironment from "./Components/PracticeSeventhScopeLexicalEnvironment";
-import JustExample from "./Components/JustExample";
-import PracticeEighthTemporalDeadZone from "./Components/PracticeEighthTemporalDeadZone";
-import PracticeExample from "./Components/Practice_Example";
+import PracticeFifthShortestJS from "./Components/app/PracticeFifthShortestJS ";
+import PracticeSixthUndefinedAndNotDefined from "./Components/app/PracticeSixthUndefinedAndNotDefined";
+import PracticeSeventhScopeLexicalEnvironment from "./Components/app/PracticeSeventhScopeLexicalEnvironment";
+import JustExample from "./Components/app/JustExample";
+import PracticeEighthTemporalDeadZone from "./Components/app/PracticeEighthTemporalDeadZone";
+import PracticeExample from "./Components/app/Practice_Example";
+import WorkingHourChallenge from "./Components/app/WorkingHourChallenge";
+import NodeApiTest from "./Components/app/nodejsAPI/NodeApiTest";
 
 function App() {
+  const routes = [
+    {
+      title: "P-2 : Execution Contexts",
+      element: <PracticeSecondExecution />,
+      path: "/",
+    },
+    {
+      title: "P-3 : Hoisting",
+      element: <PracticeThirdHoisting />,
+      path: "/hoisting",
+    },
+    {
+      title: "P-4 : Function & Variable",
+      element: <PracticeFourthFunctionAndVariable />,
+      path: "/function-and-variable",
+    },
+    {
+      title: "P-5 : Shortest-JS Program",
+      element: <PracticeFifthShortestJS />,
+      path: "/shortest-js-program",
+    },
+    {
+      title: "P-6 : Undefined And Notdefined",
+      element: <PracticeSixthUndefinedAndNotDefined />,
+      path: "/undefined-and-notdefined",
+    },
+    {
+      title: "P-7 : Scope And Lexical Environment",
+      element: <PracticeSeventhScopeLexicalEnvironment />,
+      path: "/scope-and-lexical-environment",
+    },
+    {
+      title: "Example-For-Options",
+      element: <PracticeEighthTemporalDeadZone />,
+      path: "/example-for-options",
+    },
+    {
+      title: "Practice Example",
+      element: <JustExample />,
+      path: "/practice-example",
+    },
+    {
+      title: "Working Hour Challenge : 1",
+      element: <WorkingHourChallenge />,
+      path: "/challenge-1",
+    },
+    {
+      title: "Node API Test",
+      element: <NodeApiTest />,
+      path: "/node-api-test",
+    },
+  ];
+
   return (
     <Card>
       <CardBody>
@@ -33,80 +88,25 @@ function App() {
                 overflowY: "auto",
               }}
             >
-              {/* Nav-Bar Start */}
+              {/* Nav-Bar ---------------------------------------------------------------------------------------------------- START */}
               <Nav variant="pills" className="flex-column mt-4">
-                <NavLink className="nav-link" to="/">
-                  P-2 : Execution Contexts
-                </NavLink>
-                <NavLink className="nav-link" to="/hoisting">
-                  P-3 : Hoisting
-                </NavLink>
-                <NavLink className="nav-link" to="/function-and-variable">
-                  P-4 : Function & Variable
-                </NavLink>
-                <NavLink className="nav-link" to="/shortest-js-program">
-                  P-5 : Shortest-JS Program
-                </NavLink>
-                <NavLink className="nav-link" to="/undefined-and-notdefined">
-                  P-6 : Undefined And Notdefined
-                </NavLink>
-                <NavLink
-                  className="nav-link"
-                  to="/scope-and-lexical-environment"
-                >
-                  P-7 : Scope And Lexical Environment
-                </NavLink>
-                <NavLink className="nav-link" to="/temporal-dead-zone">
-                  P-8 : Temporal Dead Zone
-                </NavLink>
-                <NavLink className="nav-link" to="/example-for-options">
-                  Example-For-Options
-                </NavLink>
-                <NavLink className="nav-link" to="/practice-example">
-                  Practice Example
-                </NavLink>
+                {routes.map((row) => (
+                  <NavLink className="nav-link" to={row.path}>
+                    {row.title}
+                  </NavLink>
+                ))}
               </Nav>
-              {/* Nav-Bar End */}
+              {/* Nav-Bar ---------------------------------------------------------------------------------------------------- END */}
             </Col>
 
             <Col sm={10}>
-              {/* Routes Start */}
+              {/* Routes ---------------------------------------------------------------------------------------------------- START */}
               <Routes>
-                {/* Practice 2 : Execution Contexts */}
-                <Route path="/" element={<PracticeSecondExecution />} />
-                {/* Practice 3 : Hoisting */}
-                <Route path="hoisting" element={<PracticeThirdHoisting />} />
-                {/* Practice 4 : Function & Variable */}
-                <Route
-                  path="function-and-variable"
-                  element={<PracticeFourthFunctionAndVariable />}
-                />
-                {/* Practice 5 : Shortest-JS Program */}
-                <Route
-                  path="shortest-js-program"
-                  element={<PracticeFifthShortestJS />}
-                />
-                {/* Practice 6 : Undefined And Notdefined */}
-                <Route
-                  path="undefined-and-notdefined"
-                  element={<PracticeSixthUndefinedAndNotDefined />}
-                />
-                {/* Practice 7 : Scope And Lexical Environment */}
-                <Route
-                  path="scope-and-lexical-environment"
-                  element={<PracticeSeventhScopeLexicalEnvironment />}
-                />
-                {/* P-8 : Temporal Dead Zone */}
-                <Route
-                  path="temporal-dead-zone"
-                  element={<PracticeEighthTemporalDeadZone />}
-                />
-                {/*  Example-For-Options */}
-                <Route path="example-for-options" element={<JustExample />} />
-                {/* Practice_Example */}
-                <Route path="practice-example" element={<PracticeExample />} />
+                {routes.map((row) => (
+                  <Route path={row.path} element={row.element} />
+                ))}
               </Routes>
-              {/* Routes End */}
+              {/* Routes ---------------------------------------------------------------------------------------------------- END */}
             </Col>
           </Row>
         </Tab.Container>
